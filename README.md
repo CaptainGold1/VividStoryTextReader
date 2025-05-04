@@ -1,36 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vivid Story Text Reader
 
-## Getting Started
+A simple application, inspired by [ASTR](https://github.com/050644zf/ArknightsStoryTextReader/), to read visual novels in a more portable format.
 
-First, run the development server:
+The name is derived from its initial purpose, which was to allow me to read [vivid/stasis](https://store.steampowered.com/app/2093940/vividstasis/)'s story on-the-go and without having to jump around in the Node Flowchart. However, in accordance with the [vivid/stasis Derivative Works Policy](https://shrinereport.xyz/policy.html) I currently will not provide vivid/stasis's parsed story files in this repository, as it violates the "no story simulator" policy, nor will I publish the code I used to parse the story files. I have currently not had any contact with any official Hajimeli or SKY HOUR WORKS team members to confirm or deny whether providing the story files or parsing code is permissible. If any Hajimeli or SKY HOUR WORKS employee would like to contact me to fully clarify this matter, my Discord handle is "captaingold1", and my email is "captaingoldone@gmail.com".
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+On that note, [vivid/stasis](https://store.steampowered.com/app/2093940/vividstasis/) is an amazing game produced by [Hajimeli Studios](https://store.steampowered.com/search/?publisher=Hajimeli)/[Team Vividstasis](https://store.steampowered.com/search/?developer=Team%20Vividstasis), and published by [SKY HOUR WORKS](https://store.steampowered.com/publisher/skyhourworks). This project is **NOT** officially endorsed by or owned by Hajimeli, SKY HOUR WORKS, or any individual contributors associated with vivid/stasis. You should play the game for yourself, and experience its story.
