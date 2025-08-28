@@ -9,7 +9,7 @@ export async function getGameData(gameName: string): Promise<EpisodeDetails[]> {
 				reject(err);
 			}
 
-			let parsedEpisode: EpisodeDetails[] = JSON.parse(data.toString());
+			const parsedEpisode: EpisodeDetails[] = JSON.parse(data.toString());
 
 			resolve(parsedEpisode);
 		});

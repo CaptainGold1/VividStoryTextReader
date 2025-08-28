@@ -9,7 +9,7 @@ export async function getFileData(gameName: string, fileName: string): Promise<E
 				reject(err);
 			}
 
-			let parsedEpisode: Episode = JSON.parse(data.toString());
+			const parsedEpisode: Episode = JSON.parse(data.toString());
 
 			resolve(parsedEpisode);
 		});

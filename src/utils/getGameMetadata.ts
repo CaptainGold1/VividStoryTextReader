@@ -10,7 +10,7 @@ export async function getGameMetadata(gameName: string):
 				reject(err);
 			}
 
-			let parsedEpisode = JSON.parse(data.toString());
+			const parsedEpisode = JSON.parse(data.toString());
 
 			resolve(parsedEpisode);
 		});
