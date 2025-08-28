@@ -1,8 +1,8 @@
-
+import {ReactNode} from "react";
 
 export default function GradientText(
 	{children, colors}:
-	{children: React.ReactNode, colors: string[]}
+	{children: ReactNode, colors: string[]}
 ) {
 	const colorsString = colors.join(", ");
 

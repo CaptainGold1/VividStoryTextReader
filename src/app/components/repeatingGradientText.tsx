@@ -1,8 +1,8 @@
-
+import { ReactNode } from "react";
 
 export default function RepeatingGradientText(
 	{children, colors, size}:
-	{children: React.ReactNode, colors: string[], size: number}
+	{children: ReactNode, colors: string[], size: number}
 ) {
 	let colorsString = "";
 	for (let i = 0; i < colors.length; i++) {

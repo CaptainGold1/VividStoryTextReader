@@ -40,7 +40,7 @@ export default async function FilePage(
 
 	const parts = episode.array;
 
-	const partsComponents = parts.map((part, index) => {
+	const partsComponents = parts.map((part) => {
 		let components: JSX.Element[] = [];
 
 		let separatorCount = 0;
@@ -88,7 +88,7 @@ export default async function FilePage(
 			}
 		}
 
-		return components.map((component, index) => {
+		return components.map((component) => {
 			return component;
 		})
 	})
