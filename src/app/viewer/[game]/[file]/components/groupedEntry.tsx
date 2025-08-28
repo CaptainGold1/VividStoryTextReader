@@ -6,6 +6,7 @@ export default function GroupedEntry (
 	{entries, textColors, nameColors} :
 	{entries: Entry[], textColors: {[key: string]: string | string[]}, nameColors: {[key: string]: string | string[]}}
 ) {
+	// TODO: Make this use handleString to actually replicate jitter effects
 	return (
 		<div className="">
 			{entries.map((entry, index) => {

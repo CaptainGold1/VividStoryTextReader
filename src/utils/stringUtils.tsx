@@ -58,7 +58,6 @@ export function handleEffects(toEffect: string) {
 
 export function trimEffects(toTrim: string) {
 	// For now, I'm just trimming the jitter effects since I don't want to replicate them
-	// TODO: Actually replicate the text jitter :D
 	return toTrim.replaceAll(/`e{.+}/g, "");
 }
 
