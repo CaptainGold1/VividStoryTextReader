@@ -8,7 +8,10 @@ import { motion } from "motion/react";
 import type {EpisodeDetails} from "@/types/episode";
 import epNameToFileName from "@/utils/epNameToFileName";
 
-export default function EpisodeEntry({details, game}: {details: EpisodeDetails, game: string}) {
+export default function EpisodeEntry(
+	{details, game, story}:
+	{details: EpisodeDetails, game: string, story: string}
+) {
 	const [popoverOpen, setPopoverOpen] = useState(false);
 
 	return (
@@ -36,7 +39,7 @@ export default function EpisodeEntry({details, game}: {details: EpisodeDetails, 
 			>
 				<Link
 					className="flex rounded-md gap-5 items-end bg-gray-800 p-3 transition-colors hover:bg-gray-700 cursor-pointer"
-					href={`/viewer/${game}/${epNameToFileName(details.ep_name)}`}
+					href={`/viewer/${game}/${story}/${epNameToFileName(details.ep_name)}`}
 					onMouseEnter={() => setPopoverOpen(true)}
 					onMouseLeave={() => setPopoverOpen(false)}
 				>

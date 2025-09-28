@@ -1,5 +1,5 @@
 import type {Message} from "@/types/entry";
-import NamedEntry from "@/app/viewer/[game]/[file]/components/namedEntry";
+import NamedEntry from "@/app/viewer/[game]/[story]/[file]/components/namedEntry";
 
 export default function GroupedMessageEntry (
 	{entries, textColors, nameColors} :

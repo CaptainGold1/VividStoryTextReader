@@ -1,5 +1,5 @@
 import type {Entry} from "@/types/entry";
-import NamedEntry from "@/app/viewer/[game]/[file]/components/namedEntry";
+import NamedEntry from "@/app/viewer/[game]/[story]/[file]/components/namedEntry";
 import {colorText, trimEffects} from "@/utils/stringUtils";
 
 export default function GroupedEntry (

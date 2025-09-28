@@ -4,9 +4,9 @@ export interface EpisodeDetails {
 	ep_name: string
 	ep_title: string
 	story_id: string
-	content_alert: string
+	content_alert?: string
 	desc: string
-	content: string
+	content?: string
 }
 
 export interface Part {

@@ -1,25 +1,25 @@
 import {JSX} from "react";
 
-import StoryNav from "@/app/viewer/[game]/[file]/components/storyNav";
-import NamedEntry from "@/app/viewer/[game]/[file]/components/namedEntry";
+import StoryNav from "@/app/viewer/[game]/[story]/[file]/components/storyNav";
+import NamedEntry from "@/app/viewer/[game]/[story]/[file]/components/namedEntry";
 import type {Episode, EpisodeDetails} from "@/types/episode";
 import {getFileData} from "@/utils/getFileData";
-import GroupedEntry from "@/app/viewer/[game]/[file]/components/groupedEntry";
+import GroupedEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedEntry";
 import {Entry} from "@/types/entry";
 import {getGameMetadata} from "@/utils/getGameMetadata";
-import {getGameData} from "@/utils/getGameData";
-import EntrySeparator from "@/app/viewer/[game]/[file]/components/entrySeparator";
-import GroupedMessageEntry from "@/app/viewer/[game]/[file]/components/groupedMessageEntry";
+import {getStoryData} from "@/utils/getStoryData";
+import EntrySeparator from "@/app/viewer/[game]/[story]/[file]/components/entrySeparator";
+import GroupedMessageEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedMessageEntry";
 
 export default async function FilePage(
 	{params} :
-	{params: Promise<{game: string, file: string}>}
+	{params: Promise<{game: string, story: string, file: string}>}
 ) {
-	const {game, file} = await(params)
+	const {game, story, file} = await(params)
 
-	const episode: Episode = await getFileData(game, file);
+	const episode: Episode = await getFileData(game, story, file);
 	const gameMetadata = await getGameMetadata(game);
-	const gameData = await getGameData(game);
+	const gameData = await getStoryData(game, story);
 	const nameColors = gameMetadata["charColors"];
 	const textColors = gameMetadata["textColors"];
 	const textEffects = gameMetadata["textEffects"];
@@ -95,11 +95,12 @@ export default async function FilePage(
 
     return (
 		<div className="flex flex-col items-center w-full h-full">
-			<StoryNav game={game} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
+			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
 			<div className="flex flex-col justify-center sm:w-8/12 gap-1 mb-64">
-				<p className="text-center text-xl mt-8 mb-4 font-bold">{episode.desc}</p>
+				<p className="text-center text-2xl mt-8 mb-4 font-bold">{episode.desc}</p>
 				{partsComponents}
 			</div>
+			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
 		</div>
     )
 }
