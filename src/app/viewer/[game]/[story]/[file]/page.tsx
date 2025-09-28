@@ -94,13 +94,13 @@ export default async function FilePage(
 	})
 
     return (
-		<div className="flex flex-col items-center w-full h-full">
+		<div className="flex flex-col items-center w-full h-full min-h-[calc(100vh-48px)]">
 			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
 			<div className="flex flex-col justify-center sm:w-8/12 gap-1 mb-64">
 				<p className="text-center text-2xl mt-8 mb-4 font-bold">{episode.desc}</p>
 				{partsComponents}
 			</div>
-			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
+			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp} bottomBar={true}/>
 		</div>
     )
 }

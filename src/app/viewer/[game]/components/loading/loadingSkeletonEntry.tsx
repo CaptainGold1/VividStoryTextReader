@@ -1,5 +1,3 @@
-import {handleString} from "@/utils/stringUtils";
-
 export default function LoadingSkeletonEntry(
 	{visibleName}:
 	{visibleName: boolean}

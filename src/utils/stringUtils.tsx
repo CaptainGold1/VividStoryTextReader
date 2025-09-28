@@ -36,15 +36,15 @@ export function colorText(toColor: string, textColors: {[key: string]: string | 
 
 // Retired in favor of handleString, but kept in place for legacy purposes
 export function handleEffects(toEffect: string) {
-	let foundIndex = toEffect.search(/`e{.+}/g);
+	const foundIndex = toEffect.search(/`e{.+}/g);
 	if (foundIndex === -1) return <span>{toEffect}</span>;
 
-	let effectArray: {text: string, effect: string}[] = [];
+	const effectArray: {text: string, effect: string}[] = [];
 
 	while (foundIndex !== -1) {
-		let endIndex = toEffect.indexOf("}", foundIndex);
+		const endIndex = toEffect.indexOf("}", foundIndex);
 		if (toEffect.substring(foundIndex + 3, endIndex + 1) === "jitter") {
-			let endOfEffect = toEffect.indexOf("`e{normal}", endIndex + 1);
+			const endOfEffect = toEffect.indexOf("`e{normal}", endIndex + 1);
 			effectArray.push({text: toEffect.substring(endIndex + 1, endOfEffect), effect: "italics"});
 		}
 	}

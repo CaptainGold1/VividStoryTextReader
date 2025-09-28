@@ -9,12 +9,14 @@ export default async function StoryPage({params}: {params: Promise<{game: string
 	const supplementDetailsDict: SupplementDetailsDict = await getSupplementData(game);
 
 	return (
-		<ol className="flex flex-col gap-5 mt-5 w-11/12 md:w-8/12 mb-5 md:mb-64">
-			{
-				Object.entries(supplementDetailsDict).map(([key, value]) => {
-					return <SupplementEntry details={value} game={game} key={key}/>
-				})
-			}
-		</ol>
+		<div className="flex flex-col items-center w-full h-full">
+			<ol className="flex flex-col gap-5 mt-5 w-11/12 md:w-8/12 mb-5 md:mb-64">
+				{
+					Object.entries(supplementDetailsDict).map(([key, value]) => {
+						return <SupplementEntry details={value} game={game} key={key}/>
+					})
+				}
+			</ol>
+		</div>
 	)
 }

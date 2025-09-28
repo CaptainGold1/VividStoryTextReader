@@ -4,15 +4,22 @@ import epNameToFileName from "@/utils/epNameToFileName";
 import EmptyNav from "@/app/viewer/[game]/components/emptyNav";
 
 export default function StoryNav(
-	{game, story, styledGameName, nextEp, prevEp}:
-	{game: string, story: string, styledGameName: string, nextEp: EpisodeDetails | null, prevEp: EpisodeDetails | null}
+	{game, story, styledGameName, nextEp, prevEp, bottomBar}:
+	{
+		game: string,
+		story: string,
+		styledGameName: string,
+		nextEp: EpisodeDetails | null,
+		prevEp: EpisodeDetails | null,
+		bottomBar?: boolean,
+	}
 ) {
 
 
 	return (
-		<EmptyNav>
+		<EmptyNav bottomBar={bottomBar}>
 			<Link
-				className=""
+				className="ml-2"
 				href={`/viewer/${game}`}>
 				{styledGameName}
 			</Link>

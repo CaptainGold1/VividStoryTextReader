@@ -1,19 +1,26 @@
 import Link from "next/link";
-import {EpisodeDetails} from "@/types/episode";
 import epNameToFileName from "@/utils/epNameToFileName";
 import {SupplementDetails} from "@/types/supplement";
 import EmptyNav from "@/app/viewer/[game]/components/emptyNav";
 
 export default function SupplementNav(
-	{game, styledGameName, nextEp, prevEp}:
-	{game: string, styledGameName: string, nextEp: SupplementDetails | null, prevEp: SupplementDetails | null}
+	{game, styledGameName, nextEp, prevEp, bottomBar}:
+	{
+		game: string,
+		styledGameName: string,
+		nextEp: SupplementDetails | null,
+		prevEp: SupplementDetails | null,
+		bottomBar?: boolean
+	}
 ) {
-
+	if (bottomBar == null) {
+		bottomBar = false;
+	}
 
 	return (
-		<EmptyNav>
+		<EmptyNav bottomBar={bottomBar}>
 			<Link
-				className=""
+				className="ml-2"
 				href={`/viewer/${game}`}>
 				{styledGameName}
 			</Link>
