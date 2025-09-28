@@ -16,6 +16,7 @@ export default function JitterText(
 					return (<span
 						className="*:inline-block inline-block"
 						key={index}
+						suppressHydrationWarning
 					>{
 						stringArray.map((char, i) => {
 							let checkedChar: ReactNode = char;
@@ -26,7 +27,6 @@ export default function JitterText(
 									animation: "jitter infinite " + (Math.random() * 0.25 + 0.25  + "s")
 								}}
 								key = {i}
-								suppressHydrationWarning={true}
 							>{checkedChar}</span>
 						})
 					}</span>)

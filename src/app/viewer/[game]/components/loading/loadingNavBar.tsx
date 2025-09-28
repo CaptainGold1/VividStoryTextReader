@@ -1,5 +1,7 @@
 import EmptyNav from "@/app/viewer/[game]/components/emptyNav";
 
+// TODO: The fake "game name" part of the topbar loading skeleton looks too small on mobile, need to buff it up
+
 export default function LoadingNavBar() {
 	return (
 		<EmptyNav>
