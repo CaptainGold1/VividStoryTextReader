@@ -26,3 +26,8 @@ export interface Episode {
 	content: string
 	array: Part[]
 }
+
+export interface DialogueOption {
+	"name": string,
+	"story_id": string
+}

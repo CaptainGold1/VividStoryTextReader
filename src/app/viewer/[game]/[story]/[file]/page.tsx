@@ -11,6 +11,10 @@ import {getStoryData} from "@/utils/getStoryData";
 import EntrySeparator from "@/app/viewer/[game]/[story]/[file]/components/entrySeparator";
 import GroupedMessageEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedMessageEntry";
 
+// TODO: To make the encore work like I want it to (and to allow dynamic stuff and all that)
+// A lot of this logic has to be shoehorned into a client component, which I suppose makes sense
+// But also makes me mad
+
 export default async function FilePage(
 	{params} :
 	{params: Promise<{game: string, story: string, file: string}>}
@@ -93,7 +97,7 @@ export default async function FilePage(
 		})
 	})
 
-    return (
+	return (
 		<div className="flex flex-col items-center w-full h-full min-h-[calc(100vh-48px)]">
 			<StoryNav game={game} story={story} styledGameName={gameMetadata.name} prevEp={prevEp} nextEp={nextEp}/>
 			<div className="flex flex-col justify-center sm:w-8/12 gap-1 mb-64">
