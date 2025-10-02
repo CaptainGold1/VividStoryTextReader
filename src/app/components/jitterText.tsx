@@ -27,6 +27,7 @@ export default function JitterText(
 									animation: "jitter infinite " + (Math.random() * 0.25 + 0.25  + "s")
 								}}
 								key = {i}
+								suppressHydrationWarning
 							>{checkedChar}</span>
 						})
 					}</span>)
