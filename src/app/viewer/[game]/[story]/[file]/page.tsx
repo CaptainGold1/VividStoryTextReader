@@ -12,10 +12,6 @@ import EntrySeparator from "@/app/viewer/[game]/[story]/[file]/components/entryS
 import GroupedMessageEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedMessageEntry";
 import InteractivePage from "@/app/viewer/[game]/[story]/[file]/interactivePage";
 
-// TODO: To make the encore work like I want it to (and to allow dynamic stuff and all that)
-// A lot of this logic has to be shoehorned into a client component, which I suppose makes sense
-// But also makes me mad
-
 export default async function FilePage(
 	{params} :
 	{params: Promise<{game: string, story: string, file: string}>}
