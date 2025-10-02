@@ -1,15 +1,9 @@
-import {JSX} from "react";
 
 import StoryNav from "@/app/viewer/[game]/[story]/[file]/components/storyNav";
-import NamedEntry from "@/app/viewer/[game]/[story]/[file]/components/namedEntry";
-import type {Episode, EpisodeDetails} from "@/types/episode";
+import type {EpisodeDetails} from "@/types/episode";
 import {getFileData} from "@/utils/getFileData";
-import GroupedEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedEntry";
-import {Entry} from "@/types/entry";
 import {getGameMetadata} from "@/utils/getGameMetadata";
 import {getStoryData} from "@/utils/getStoryData";
-import EntrySeparator from "@/app/viewer/[game]/[story]/[file]/components/entrySeparator";
-import GroupedMessageEntry from "@/app/viewer/[game]/[story]/[file]/components/groupedMessageEntry";
 import InteractivePage from "@/app/viewer/[game]/[story]/[file]/interactivePage";
 
 export default async function FilePage(
