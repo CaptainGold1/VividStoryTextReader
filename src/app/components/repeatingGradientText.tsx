@@ -10,13 +10,17 @@ export default function RepeatingGradientText(
 	}
 	colorsString += `${colors[0]} ${size * colors.length}px`;
 
+	const gradientSize = size * colors.length;
+
 	return (
 		<span
 			style={{
 				backgroundImage: `repeating-linear-gradient(to right, ${colorsString})`,
 				backgroundClip: "text",
+				backgroundSize: `${gradientSize}px 100%`,
+				["--size" as string]: gradientSize,
 			}}
-			className="text-transparent"
+			className="text-transparent animate-background"
 		>
 			{children}
 		</span>

@@ -35,6 +35,20 @@
 	}
 }
 
+@utility animate-background {
+	animation: animate-background-keyframes 4s linear infinite;
+}
+
+@keyframes animate-background-keyframes {
+	0% {
+		background-position: 0 50%;
+	}
+	/*noinspection CssUnresolvedCustomProperty*/
+	100% {
+		background-position: calc(1px * var(--size)) 50%;
+	}
+}
+
 @keyframes skeleton-loading {
 	0% {
 		background-color: #F5F5F5; /* FROM Color 1 */
